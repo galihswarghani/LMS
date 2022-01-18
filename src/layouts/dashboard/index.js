@@ -1,163 +1,154 @@
-/**
-=========================================================
-* Material Dashboard 2 React - v2.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-dashboard-react
-* Copyright 2021 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
-
-// @mui material components
 import Grid from "@mui/material/Grid";
-
-// Material Dashboard 2 React components
-import MDBox from "components/MDBox";
-
-// Material Dashboard 2 React example components
+import DefaultInfoCard from "examples/Cards/InfoCards/DefaultInfoCard";
 import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
 import DashboardNavbar from "examples/Navbars/DashboardNavbar";
-import Footer from "examples/Footer";
-import ReportsBarChart from "examples/Charts/BarCharts/ReportsBarChart";
-import ReportsLineChart from "examples/Charts/LineCharts/ReportsLineChart";
-import ComplexStatisticsCard from "examples/Cards/StatisticsCards/ComplexStatisticsCard";
+import "./data/home.css";
+// import Footer from "examples/Footer";
+
+// import ReportsBarChart from "examples/Charts/BarCharts/ReportsBarChart";
+// import ReportsLineChart from "examples/Charts/LineCharts/ReportsLineChart";
+// import ComplexStatisticsCard from "examples/Cards/StatisticsCards/ComplexStatisticsCard";
 
 // Data
-import reportsBarChartData from "layouts/dashboard/data/reportsBarChartData";
-import reportsLineChartData from "layouts/dashboard/data/reportsLineChartData";
+// import reportsBarChartData from "layouts/dashboard/data/reportsBarChartData";
+// import reportsLineChartData from "layouts/dashboard/data/reportsLineChartData";
 
 // Dashboard components
-import Projects from "layouts/dashboard/components/Projects";
-import OrdersOverview from "layouts/dashboard/components/OrdersOverview";
+// import Projects from "layouts/dashboard/components/Projects";
+// import OrdersOverview from "layouts/dashboard/components/OrdersOverview";
 
 function Dashboard() {
-  const { sales, tasks } = reportsLineChartData;
-
   return (
     <DashboardLayout>
       <DashboardNavbar />
-      <MDBox py={3}>
-        <Grid container spacing={3}>
-          <Grid item xs={12} md={6} lg={3}>
-            <MDBox mb={1.5}>
-              <ComplexStatisticsCard
-                color="dark"
-                icon="weekend"
-                title="Bookings"
-                count={281}
-                percentage={{
-                  color: "success",
-                  amount: "+55%",
-                  label: "than lask week",
-                }}
+      <div className="dashboard">
+        <div className="permohonan">
+          <p className="p1">Permohonan</p>
+          <div className="permohonan1">
+            <Grid>
+              <DefaultInfoCard
+                // icon="account_balance"
+                title="Total Batch"
+                description="5"
+                // value="+$2000"
               />
-            </MDBox>
-          </Grid>
-          <Grid item xs={12} md={6} lg={3}>
-            <MDBox mb={1.5}>
-              <ComplexStatisticsCard
-                icon="leaderboard"
-                title="Today's Users"
-                count="2,300"
-                percentage={{
-                  color: "success",
-                  amount: "+3%",
-                  label: "than last month",
-                }}
+            </Grid>
+          </div>
+          <div className="permohonan2">
+            <Grid>
+              <DefaultInfoCard
+                // icon="account_balance"
+                title="Customer"
+                description="500"
+                // value="+$2000"
               />
-            </MDBox>
-          </Grid>
-          <Grid item xs={12} md={6} lg={3}>
-            <MDBox mb={1.5}>
-              <ComplexStatisticsCard
-                color="success"
-                icon="store"
-                title="Revenue"
-                count="34k"
-                percentage={{
-                  color: "success",
-                  amount: "+1%",
-                  label: "than yesterday",
-                }}
+            </Grid>
+          </div>
+          <div className="permohonan3">
+            <Grid>
+              <DefaultInfoCard
+                // icon="account_balance"
+                title="Plafond"
+                description="Rp. 50.000.000"
+                // value="+$2000"
               />
-            </MDBox>
-          </Grid>
-          <Grid item xs={12} md={6} lg={3}>
-            <MDBox mb={1.5}>
-              <ComplexStatisticsCard
-                color="primary"
-                icon="person_add"
-                title="Followers"
-                count="+91"
-                percentage={{
-                  color: "success",
-                  amount: "",
-                  label: "Just updated",
-                }}
-              />
-            </MDBox>
-          </Grid>
-        </Grid>
-        <MDBox mt={4.5}>
-          <Grid container spacing={3}>
-            <Grid item xs={12} md={6} lg={4}>
-              <MDBox mb={3}>
-                <ReportsBarChart
-                  color="info"
-                  title="website views"
-                  description="Last Campaign Performance"
-                  date="campaign sent 2 days ago"
-                  chart={reportsBarChartData}
+            </Grid>
+          </div>
+          <div className="reject">
+            <p className="p2">Reject</p>
+            <div className="reject1">
+              <Grid>
+                <DefaultInfoCard
+                  // icon="account_balance"
+                  title="Customer"
+                  description="200"
+                  // value="+$2000"
                 />
-              </MDBox>
-            </Grid>
-            <Grid item xs={12} md={6} lg={4}>
-              <MDBox mb={3}>
-                <ReportsLineChart
-                  color="success"
-                  title="daily sales"
-                  description={
-                    <>
-                      (<strong>+15%</strong>) increase in today sales.
-                    </>
-                  }
-                  date="updated 4 min ago"
-                  chart={sales}
+              </Grid>
+            </div>
+            <div className="reject2">
+              <Grid>
+                <DefaultInfoCard
+                  // icon="account_balance"
+                  title="Plafond"
+                  description="Rp.10.000.000"
+                  // value="+$2000"
                 />
-              </MDBox>
-            </Grid>
-            <Grid item xs={12} md={6} lg={4}>
-              <MDBox mb={3}>
-                <ReportsLineChart
-                  color="dark"
-                  title="completed tasks"
-                  description="Last Campaign Performance"
-                  date="just updated"
-                  chart={tasks}
+              </Grid>
+            </div>
+          </div>
+          <div className="cair">
+            <p className="p3">Cair</p>
+            <div className="cair1">
+              <Grid>
+                <DefaultInfoCard
+                  // icon="account_balance"
+                  title="Customer"
+                  description="400"
+                  // value="+$2000"
                 />
-              </MDBox>
-            </Grid>
-          </Grid>
-        </MDBox>
-        <MDBox>
-          <Grid container spacing={3}>
-            <Grid item xs={12} md={6} lg={8}>
-              <Projects />
-            </Grid>
-            <Grid item xs={12} md={6} lg={4}>
-              <OrdersOverview />
-            </Grid>
-          </Grid>
-        </MDBox>
-      </MDBox>
-      <Footer />
+              </Grid>
+            </div>
+            <div className="cair2">
+              <Grid>
+                <DefaultInfoCard
+                  // icon="account_balance"
+                  title="Plafond"
+                  description="Rp.40.000.000"
+                  // value="+$2000"
+                />
+              </Grid>
+            </div>
+          </div>
+          <div className="open">
+            <p className="p4">Open</p>
+            <div className="open1">
+              <Grid>
+                <DefaultInfoCard
+                  // icon="account_balance"
+                  title="Customer"
+                  description="250"
+                  // value="+$2000"
+                />
+              </Grid>
+            </div>
+            <div className="open2">
+              <Grid>
+                <DefaultInfoCard
+                  // icon="account_balance"
+                  title="Plafond"
+                  description="Rp.30.000.000"
+                  // value="+$2000"
+                />
+              </Grid>
+            </div>
+          </div>
+          <div className="close">
+            <p className="p5">Close</p>
+            <div className="close1">
+              <Grid>
+                <DefaultInfoCard
+                  // icon="account_balance"
+                  title="Customer"
+                  description="150"
+                  // value="+$2000"
+                />
+              </Grid>
+            </div>
+            <div className="close2">
+              <Grid>
+                <DefaultInfoCard
+                  // icon="account_balance"
+                  title="Plafond"
+                  description="Rp.10.000.000"
+                  // value="+$2000"
+                />
+              </Grid>
+            </div>
+          </div>
+        </div>
+      </div>
     </DashboardLayout>
   );
 }
-
 export default Dashboard;
