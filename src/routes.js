@@ -5,6 +5,9 @@ import Billing from "layouts/billing";
 import Profile from "layouts/profile";
 import Notifications from "layouts/notifications";
 import SignIn from "layouts/authentication/sign-in";
+import SubmitSelected from "layouts/submitSelected/submitSelected";
+import InputPemohon from "layouts/inputPemohon/inputPemohon";
+import SlikSummary from "layouts/slikSummary/slikSummary";
 
 // @mui icons
 import Icon from "@mui/material/Icon";
@@ -23,7 +26,7 @@ const routes = [
     name: "Batch Upload",
     key: "batch",
     icon: <Icon fontSize="small">table_view</Icon>,
-    route: "/billing",
+    route: "/batch",
     component: <Billing />,
   },
   {
@@ -31,23 +34,45 @@ const routes = [
     name: "Pemohon",
     key: "pemohon",
     icon: <Icon fontSize="small">receipt_long</Icon>,
-    route: "/tables",
+    route: "/pemohon",
     component: <Tables />,
   },
   {
     type: "collapse",
+    name: "Slik Summary",
+    key: "slikSummery",
+    icon: <Icon fontSize="small">table_view</Icon>,
+    route: "/slikSummary",
+    component: <SlikSummary />,
+  },
+  {
+    type: "collapse",
     name: "Review",
-    key: "profile",
+    key: "Review",
     icon: <Icon fontSize="small">person</Icon>,
-    route: "/profile",
+    route: "/review",
     component: <Profile />,
+  },
+  {
+    name: "Submit Selected",
+    key: "submitSelected",
+    icon: <Icon fontSize="small">person</Icon>,
+    route: "/submitSelected",
+    component: <SubmitSelected />,
+  },
+  {
+    name: "Input Pemohon",
+    key: "inputPemohon",
+    icon: <Icon fontSize="small">person</Icon>,
+    route: "/inputPemohon",
+    component: <InputPemohon />,
   },
   {
     type: "collapse",
     name: "Approval",
-    key: "notifications",
+    key: "Approval",
     icon: <Icon fontSize="small">person</Icon>,
-    route: "/notifications",
+    route: "/approval",
     component: <Notifications />,
   },
   {

@@ -1,3 +1,5 @@
-.btnP1 {
-  position: relative;
+.btn-pemohon a {
+  margin: 0 0 0 300px;
+  float: right;
+  padding: 90px;
 }

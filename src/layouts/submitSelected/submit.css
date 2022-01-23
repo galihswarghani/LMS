@@ -1,0 +1,41 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+.identitas {
+  width: 400px;
+  height: 350px;
+  border: 2px solid black;
+}
+.identitas Form {
+  font-size: medium;
+  padding: 5px;
+}
+.identitas Form Form.Group {
+  margin-left: 50px;
+}
+.identitas Form Form.Group Form.Control {
+  margin-left: 10rem;
+}
+.informasi {
+  width: 400px;
+  height: 250px;
+  border: 2px solid black;
+}
+.informasi Form {
+  font-size: medium;
+}
+.informasi Form Form.Group {
+  margin-left: 50px;
+}
+.pasangan {
+  width: 400px;
+  height: 150px;
+  border: 2px solid black;
+}
+.pasangan Form {
+  font-size: medium;
+}
+.pasangan Form Form.Group {
+  margin-left: 50px;
+}

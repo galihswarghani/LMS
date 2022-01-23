@@ -2,9 +2,10 @@ import MDButton from "components/MDButton";
 import React from "react";
 import "./styleModal.css";
 
-function AddModal() {
+// eslint-disable-next-line react/prop-types
+function AddModal({ isShowAddModal, onPressBack }) {
   return (
-    <div className="modal-container">
+    <div className="modal-container" style={{ display: isShowAddModal ? "block" : "none" }}>
       <div className="modal-box">
         <h3>Add Batch</h3>
         <div className="input">
@@ -14,6 +15,9 @@ function AddModal() {
         <MDButton variant="contained">Browse</MDButton>
         <MDButton variant="contained" color="info">
           Upload
+        </MDButton>
+        <MDButton variant="contained" color="info" onClick={onPressBack}>
+          Back
         </MDButton>
       </div>
     </div>

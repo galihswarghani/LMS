@@ -7,10 +7,12 @@ import MDButton from "components/MDButton";
 
 // Billing page components
 import Bill from "layouts/billing/components/Bill";
+import { useState } from "react";
 import AddModal from "./addModals";
 // import AddModal from "../addModals";
 
 function BatchUpload() {
+  const [isShowAddModal, setIsShowAddModal] = useState();
   return (
     <Card id="delete-account">
       <MDBox pt={3} px={2}>
@@ -18,7 +20,14 @@ function BatchUpload() {
           Batch Upload
         </MDTypography>
         <div className="btnAdd">
-          <MDButton variant="outlined" color="info" float="right">
+          <MDButton
+            variant="outlined"
+            color="info"
+            float="right"
+            onClick={() => {
+              setIsShowAddModal(true);
+            }}
+          >
             Add Batch
           </MDButton>
         </div>
@@ -60,7 +69,12 @@ function BatchUpload() {
           />
         </MDBox>
       </MDBox>
-      <AddModal />
+      <AddModal
+        isShowAddModal={isShowAddModal}
+        onPressBack={() => {
+          setIsShowAddModal(false);
+        }}
+      />
     </Card>
   );
 }

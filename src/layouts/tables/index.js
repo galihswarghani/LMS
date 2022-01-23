@@ -1,3 +1,4 @@
+/* eslint-disable react/button-has-type */
 import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
 
@@ -10,11 +11,13 @@ import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
 import DashboardNavbar from "examples/Navbars/DashboardNavbar";
 // import Footer from "examples/Footer";
 import DataTable from "examples/Tables/DataTable";
+import { useNavigate } from "react-router-dom";
 
 // Data
 import authorsTableData from "layouts/tables/data/authorsTableData";
 
 function Tables() {
+  const navigate = useNavigate();
   const { columns, rows } = authorsTableData();
   return (
     <DashboardLayout>
@@ -39,6 +42,34 @@ function Tables() {
             </Card>
           </Grid>
         </Grid>
+        <div className="btn-pemohon">
+          <a
+            href=" # "
+            onClick={(e) => {
+              e.preventDefault();
+            }}
+          >
+            <button>Request Slik</button>
+          </a>
+          <a
+            href=" # "
+            onClick={(e) => {
+              e.preventDefault();
+              navigate("/submitSelected");
+            }}
+          >
+            <button>Submit Selected</button>
+          </a>
+          <a
+            href=" # "
+            onClick={(e) => {
+              e.preventDefault();
+              navigate("/inputPemohon");
+            }}
+          >
+            <button>Approve Selected</button>
+          </a>
+        </div>
       </MDBox>
     </DashboardLayout>
   );
