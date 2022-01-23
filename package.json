@@ -8,10 +8,7 @@
   "bugs": {
     "url": "https://github.com/creativetimofficial/material-dashboard-react/issues"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/creativetimofficial/material-dashboard-react.git"
-  },
+  "repository": "git+https://github.com/creativetimofficial/material-dashboard-react.git",
   "engines": {
     "node": "14 || 15 || 16",
     "npm": ">=6"
@@ -79,5 +76,6 @@
     "eslint-plugin-react": "7.24.0",
     "eslint-plugin-react-hooks": "4.2.0",
     "prettier": "2.3.2"
-  }
+  },
+  "main": "index.js"
 }

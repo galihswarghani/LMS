@@ -3,6 +3,7 @@ import Dashboard from "layouts/dashboard";
 import Tables from "layouts/tables";
 import Billing from "layouts/billing";
 import Profile from "layouts/profile";
+import Notifications from "layouts/notifications";
 import SignIn from "layouts/authentication/sign-in";
 
 // @mui icons
@@ -20,18 +21,18 @@ const routes = [
   {
     type: "collapse",
     name: "Batch Upload",
-    key: "tables",
+    key: "batch",
     icon: <Icon fontSize="small">table_view</Icon>,
-    route: "/tables",
-    component: <Tables />,
+    route: "/billing",
+    component: <Billing />,
   },
   {
     type: "collapse",
     name: "Pemohon",
-    key: "billing",
+    key: "pemohon",
     icon: <Icon fontSize="small">receipt_long</Icon>,
-    route: "/billing",
-    component: <Billing />,
+    route: "/tables",
+    component: <Tables />,
   },
   {
     type: "collapse",
@@ -44,14 +45,14 @@ const routes = [
   {
     type: "collapse",
     name: "Approval",
-    key: "",
+    key: "notifications",
     icon: <Icon fontSize="small">person</Icon>,
-    route: "/tables",
-    component: <Profile />,
+    route: "/notifications",
+    component: <Notifications />,
   },
   {
     type: "collapse",
-    name: "Sign In",
+    name: "Log Out",
     key: "sign-in",
     icon: <Icon fontSize="small">login</Icon>,
     route: "/authentication/sign-in",
