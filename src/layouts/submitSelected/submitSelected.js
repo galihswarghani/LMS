@@ -1,23 +1,15 @@
 import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
 import DashboardNavbar from "examples/Navbars/DashboardNavbar";
 // import Container from "react-bootstrap/Container";
-// import Form from "react-bootstrap/Form";
+import Form from "react-bootstrap/Form";
 import "./submit.css";
-// import DataTable from "examples/Tables/DataTable";
-import PostData from "../data/AmarthaPermohonanData.json";
+import DataTable from "examples/Tables/DataTable";
 
 function SubmitSelected() {
   return (
     <DashboardLayout>
       <DashboardNavbar />
-      <div>
-        <h1>Hello There</h1>
-        {PostData.map((dataPokokDebitur) => (
-          <h1> {dataPokokDebitur.namaDebitur}</h1>
-        ))}
-      </div>
-
-      {/* <container>
+      <container>
         <div className="identitas">
           <p>Pemohon</p>
           <Form>
@@ -173,7 +165,7 @@ function SubmitSelected() {
             />
           </div>
         </div>
-      </container> */}
+      </container>
     </DashboardLayout>
   );
 }
