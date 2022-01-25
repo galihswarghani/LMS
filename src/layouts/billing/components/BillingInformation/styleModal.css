@@ -1,6 +1,6 @@
 .modal-container {
   width: 100vw;
-  height: 100vh;
+  height: 135vh;
   background: rgba(0, 0, 0, 0.4);
   position: absolute;
   top: 0;
@@ -26,4 +26,7 @@
 .modal-box input {
   width: 80%;
   height: 2rem;
+}
+.btn-group{
+  padding: 2px;
 }

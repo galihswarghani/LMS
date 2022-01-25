@@ -1,35 +1,33 @@
+/* eslint-disable react/button-has-type */
 import Card from "@mui/material/Card";
-
-// Material Dashboard 2 React components
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
-import MDButton from "components/MDButton";
-
-// Billing page components
 import Bill from "layouts/billing/components/Bill";
+import Upload from "layouts/upload/upload";
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import AddModal from "./addModals";
-// import AddModal from "../addModals";
 
 function BatchUpload() {
-  const [isShowAddModal, setIsShowAddModal] = useState();
+  const [backPage, setBackPage] = useState();
+  const navigate = useNavigate();
   return (
     <Card id="delete-account">
       <MDBox pt={3} px={2}>
         <MDTypography variant="h6" fontWeight="medium">
           Batch Upload
         </MDTypography>
-        <div className="btnAdd">
-          <MDButton
-            variant="outlined"
-            color="info"
-            float="right"
-            onClick={() => {
-              setIsShowAddModal(true);
-            }}
-          >
-            Add Batch
-          </MDButton>
+        <div className="upload-batch">
+          <div>
+            <a
+              href=" /upload "
+              onClick={(e) => {
+                e.preventDefault();
+                navigate("/upload");
+              }}
+            >
+              <button>Add Batch</button>
+            </a>
+          </div>
         </div>
       </MDBox>
       <MDBox pt={1} pb={2} px={2}>
@@ -69,10 +67,10 @@ function BatchUpload() {
           />
         </MDBox>
       </MDBox>
-      <AddModal
-        isShowAddModal={isShowAddModal}
+      <Upload
+        back={backPage}
         onPressBack={() => {
-          setIsShowAddModal(false);
+          setBackPage(false);
         }}
       />
     </Card>

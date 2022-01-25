@@ -1,0 +1,37 @@
+.upload-container {
+  width: 150vw;
+  left: 0;
+}
+
+.upload-box {
+  width: 50%;
+  height: 10rem;
+  top: 20%;
+  left: 30%;
+  padding: 35px;
+}
+/* .up-div {
+  display: flex;
+} */
+
+.btn-brows {
+  margin-left: 670px;
+  margin-top: -38px;
+}
+
+.upload-box h3 {
+  color: 2da4f8;
+  margin-left: 300px;
+}
+
+.upload-box input {
+  width: 60%;
+  height: 2rem;
+}
+.btn-group {
+  padding: 2px;
+}
+
+.btn-action {
+  margin-left: 50px;
+}

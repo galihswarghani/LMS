@@ -1,11 +1,15 @@
 .container {
-  display: flex;
+  display: flexbox;
   justify-content: space-between;
+  flex-direction: column;
+  align-items: baseline;
+  border: 1px solid #c1c1c1;
+  background: #f9f9f9;
 }
 .identitas {
   width: 400px;
   height: 350px;
-  border: 2px solid black;
+  border: 1px solid #c1c1c1;
 }
 .identitas Form {
   font-size: medium;
@@ -13,17 +17,22 @@
 }
 .identitas Form Form.Group {
   margin-left: 50px;
+  float: left;
+  width: calc(100% - 200px);
 }
-.identitas Form Form.Group Form.Control {
-  margin-left: 10rem;
-}
+
 .informasi {
   width: 400px;
   height: 250px;
-  border: 2px solid black;
+  border: 1px solid #c1c1c1;
+  position: absolute;
+  right: 0;
+  margin-right: 100px;
+  top: 100px;
 }
 .informasi Form {
   font-size: medium;
+  padding: 5px;
 }
 .informasi Form Form.Group {
   margin-left: 50px;
@@ -31,11 +40,39 @@
 .pasangan {
   width: 400px;
   height: 150px;
-  border: 2px solid black;
+  border: 1px solid #c1c1c1;
+  position: absolute;
+  right: 0;
+  margin-right: 100px;
+  top: 380px;
 }
 .pasangan Form {
   font-size: medium;
+  padding: 5px;
 }
 .pasangan Form Form.Group {
   margin-left: 50px;
+}
+
+p {
+  align-items: center;
+}
+
+.identitas Form Form.Group Form.Label {
+  padding: 0.5em 2rem 0.5em 0;
+}
+.identitas Form Form.Group Form.Control {
+  padding: 0.7em;
+  margin-bottom: 0.5rem;
+}
+
+.table {
+  margin: 100px 30px 20px 0;
+  width: 73rem;
+}
+.rac-deg {
+  width: auto;
+  font-size: medium;
+  border: 1px solid #c1c1c1;
+  margin-top: 8rem;
 }

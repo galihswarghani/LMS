@@ -2,15 +2,15 @@
 import Dashboard from "layouts/dashboard";
 import Tables from "layouts/tables";
 import Billing from "layouts/billing";
-import Profile from "layouts/profile";
-import Notifications from "layouts/notifications";
 import SignIn from "layouts/authentication/sign-in";
 import SubmitSelected from "layouts/submitSelected/submitSelected";
-import InputPemohon from "layouts/inputPemohon/inputPemohon";
-import SlikSummary from "layouts/slikSummary/slikSummary";
+import Upload from "layouts/upload/upload";
+// import SlikSummary from "layouts/slikSummary/slikSummary";
 
 // @mui icons
 import Icon from "@mui/material/Icon";
+import ReviewManager from "layouts/reviewManager/reviewManager";
+import ApprovalPincab from "layouts/approvalPincab/approvalPincab";
 
 const routes = [
   {
@@ -39,19 +39,19 @@ const routes = [
   },
   {
     type: "collapse",
-    name: "Slik Summary",
-    key: "slikSummery",
-    icon: <Icon fontSize="small">table_view</Icon>,
-    route: "/slikSummary",
-    component: <SlikSummary />,
+    name: "Review Manager",
+    key: "ReviewManager",
+    icon: <Icon fontSize="small">person</Icon>,
+    route: "/reviewManager",
+    component: <ReviewManager />,
   },
   {
     type: "collapse",
-    name: "Review",
-    key: "Review",
+    name: "Approval Pincab",
+    key: "ApprovalPincab",
     icon: <Icon fontSize="small">person</Icon>,
-    route: "/review",
-    component: <Profile />,
+    route: "/approvalPincab",
+    component: <ApprovalPincab />,
   },
   {
     name: "Submit Selected",
@@ -61,19 +61,11 @@ const routes = [
     component: <SubmitSelected />,
   },
   {
-    name: "Input Pemohon",
-    key: "inputPemohon",
-    icon: <Icon fontSize="small">person</Icon>,
-    route: "/inputPemohon",
-    component: <InputPemohon />,
-  },
-  {
-    type: "collapse",
-    name: "Approval",
-    key: "Approval",
-    icon: <Icon fontSize="small">person</Icon>,
-    route: "/approval",
-    component: <Notifications />,
+    name: "Upload",
+    key: "upload",
+    icon: <Icon fontSize="small">table_view</Icon>,
+    route: "/upload",
+    component: <Upload />,
   },
   {
     type: "collapse",

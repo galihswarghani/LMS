@@ -60,15 +60,6 @@ function Tables() {
           >
             <button>Submit Selected</button>
           </a>
-          <a
-            href=" # "
-            onClick={(e) => {
-              e.preventDefault();
-              navigate("/inputPemohon");
-            }}
-          >
-            <button>Approve Selected</button>
-          </a>
         </div>
       </MDBox>
     </DashboardLayout>

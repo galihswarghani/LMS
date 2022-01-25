@@ -1,14 +1,23 @@
 import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
 import DashboardNavbar from "examples/Navbars/DashboardNavbar";
 // import Container from "react-bootstrap/Container";
-import Form from "react-bootstrap/Form";
+// import Form from "react-bootstrap/Form";
 import "./submit.css";
+// import DataTable from "examples/Tables/DataTable";
+import PostData from "../data/AmarthaPermohonanData.json";
 
 function SubmitSelected() {
   return (
     <DashboardLayout>
       <DashboardNavbar />
-      <container>
+      <div>
+        <h1>Hello There</h1>
+        {PostData.map((dataPokokDebitur) => (
+          <h1> {dataPokokDebitur.namaDebitur}</h1>
+        ))}
+      </div>
+
+      {/* <container>
         <div className="identitas">
           <p>Pemohon</p>
           <Form>
@@ -112,7 +121,59 @@ function SubmitSelected() {
             </Form.Group>
           </Form>
         </div>
-      </container>
+        <div className="rac-deg">
+          <p>
+            Usia Mitra/Calon Mitra saat mengajukan minimal 21 tahun atau 18 tahun bagi yang telah
+            menikah{" "}
+          </p>
+          <p>
+            Usia Mitra/Calon Mitra saat mengajukan minimal 21 tahun atau 18 tahun bagi yang telah
+            menikah{" "}
+          </p>
+          <p>
+            Usia Mitra/Calon Mitra saat mengajukan minimal 21 tahun atau 18 tahun bagi yang telah
+            menikah{" "}
+          </p>
+        </div>
+        <div className="table">
+          <div className="tbl">
+            <DataTable
+              table={{
+                columns: [
+                  { Header: "Institusi", accessor: "name", width: "100px" },
+                  { Header: "Plafond", accessor: "position", width: "100px" },
+                  { Header: "Baki Debet", accessor: "office" },
+                  { Header: "Jatoh Tempo", accessor: "age", width: "100px" },
+                  { Header: "Kolektabilitas", accessor: "kol", width: "100px" },
+                ],
+                rows: [
+                  {
+                    name: "BCA",
+                    position: "Rp. 50.000.000",
+                    office: "Rp. 270.000",
+                    age: "22 Sept 2025",
+                    kol: "kol 1",
+                  },
+                  {
+                    name: "BNI",
+                    position: "Rp. 50.000.000",
+                    office: "Rp. 270.000",
+                    age: "22 Sept 2025",
+                    kol: "kol 1",
+                  },
+                  {
+                    name: "BRI",
+                    position: "Rp. 50.000.000",
+                    office: "Rp. 270.000",
+                    age: "22 Sept 2025",
+                    kol: "kol 1",
+                  },
+                ],
+              }}
+            />
+          </div>
+        </div>
+      </container> */}
     </DashboardLayout>
   );
 }
